@@ -1,0 +1,5 @@
+# Cache do pre-commit
+.cache/pre-commit/
+
+.venv/
+env/
