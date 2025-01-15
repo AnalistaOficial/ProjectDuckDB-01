@@ -6,7 +6,7 @@ import time
 
 def check_args(file_args):
     """
-    Sanity checks out input and prints out usage if input is not a positive integer sdhaljkghlkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    Sanity checks out input and prints out usage if input is not a positive integer
     """
     try:
         if len(file_args) != 2 or int(file_args[1]) <= 0:
