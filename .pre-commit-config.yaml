@@ -1,12 +1,25 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0  # Última versão estável
     hooks:
       - id: trailing-whitespace  # Remove espaços em branco no final das linhas
-      - id: end-of-file-fixer   # Garante uma linha vazia no final dos arquivos
-      - id: check-added-large-files  # Verifica se há arquivos grandes sendo adicionados
+      - id: end-of-file-fixer    # Garante uma linha vazia no final dos arquivos
+      - id: check-yaml           # Verifica a validade de arquivos YAML
+      - id: check-json           # Verifica a validade de arquivos JSON
+      - id: debug-statements     # Proíbe uso de `print()` e `pdb` em arquivos Python
+      - id: check-merge-conflict # Verifica se há conflitos de merge não resolvidos
 
-  - repo: https://github.com/psf/black
-    rev: 23.9.1
+  - repo: https://github.com/psf/black  # Usando o repositório oficial do black
+    rev: 24.10.0
     hooks:
-      - id: black  # Formata código Python
+      - id: black  # Formata automaticamente o código Python
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8  # Identifica problemas de linting no código Python
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.1
+    hooks:
+      - id: isort  # Organiza automaticamente os imports em arquivos Python
