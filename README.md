@@ -70,7 +70,7 @@ Para executar este projeto e reproduzir os resultados:
 
 1. Clone esse repositório
 2. Definir a versao do Python usando o `pyenv local 3.13.1` e  `poetry env use 3.13.1`
-3. Execute o comando `source .venv/Scripts/activate` depois de ativar o seu ambiente  `python projectduckdb_01/geradados.py` para gerar o arquivo de teste
+3. Execute o comando `source .venv/Scripts/activate` depois de ativar o seu ambiente, execute esse coamndo  `python projectduckdb_01/geradados.py` para gerar o arquivo de teste.
 4. Tenha paciência e vá fazer um café, vai demorar uns 10 minutos para gerar o arquivo
 5. Certifique-se de instalar a versão especificada da biblioteca DuckDB
 6. Execute o script após a geração do arquivo `python projectduckdb_01/__init__.py` através de um terminal ou ambiente de desenvolvimento que suporte Python.
