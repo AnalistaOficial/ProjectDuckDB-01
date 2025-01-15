@@ -57,4 +57,4 @@
 
     O teste foi executado em um laptop com o processador 'AMD Ryzen 7 3700U com Radeon Vega Mobile Gfx, 2300 MHz, 4 núcleos e 8 threads'. A implementação foi realizada utilizando o banco de dados 'DuckDB'. Abaixo estão apresentados os resultados e o tempo de execução:"
 
-    ![Resultado](./img/Resultado.png)
+!   [Resultado](./img/Resultado.png)
