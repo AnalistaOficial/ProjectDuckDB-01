@@ -54,3 +54,39 @@ O desafio é desenvolver um programa Python capaz de ler esse arquivo e calcular
 Para executar os scripts deste projeto, você precisará da seguinte biblioteca:
 
 * DuckDB: `1.1.3`
+
+## Resultados
+
+O teste foi executado em um laptop com o processador 'AMD Ryzen 7 3700U com Radeon Vega Mobile Gfx, 2300 MHz, 4 núcleos e 8 threads'. A implementação foi realizada utilizando o banco de dados 'DuckDB'. Abaixo estão apresentados os resultados e o tempo de execução:"
+
+┌────────────────┬─────────────────┬──────────────────┬─────────────────┐
+│    station     │ min_temperature │ mean_temperature │ max_temperature │
+│    varchar     │  decimal(3,1)   │   decimal(3,1)   │  decimal(3,1)   │
+├────────────────┼─────────────────┼──────────────────┼─────────────────┤
+│ Aalen          │           -99.2 │             -1.3 │            98.3 │
+│ Aarschot       │           -98.8 │             13.5 │            92.1 │
+│ Aarsâl         │           -99.4 │              7.9 │            99.3 │
+│ Abadan         │           -98.8 │              1.3 │            98.6 │
+│ Abadiânia      │           -97.9 │             -1.2 │            99.3 │
+│ Abadou         │           -98.9 │             -1.2 │            96.5 │
+│ Abaeté         │           -99.7 │             -0.7 │            99.0 │
+│ Abakan         │           -99.8 │             -9.7 │            98.9 │
+│ Abangaritos    │           -99.3 │             -2.8 │            99.4 │
+│ Abano Terme    │           -99.2 │              0.5 │            98.0 │
+│      ·         │             ·   │               ·  │              ·  │
+│      ·         │             ·   │               ·  │              ·  │
+│      ·         │             ·   │               ·  │              ·  │
+│ Ḩorr-e Rīāḩī   │           -97.2 │              4.2 │            99.9 │
+│ Ḩās            │           -99.6 │             -0.6 │            99.2 │
+│ Ḩā’il          │           -95.6 │              0.5 │            96.6 │
+│ ‘Afrīn         │           -97.8 │             -2.1 │            98.7 │
+│ ‘Ajlūn         │           -98.0 │             -0.4 │            98.4 │
+│ ‘Anbarābād     │           -98.7 │              3.0 │            99.6 │
+│ ‘Aqrah         │           -92.2 │             -7.5 │            89.4 │
+│ ‘Aynkāwah      │           -98.8 │             -2.7 │            99.8 │
+│ ’s-Gravendeel  │           -98.8 │              1.9 │            99.8 │
+│ ’s-Gravenzande │           -99.8 │             -4.6 │            98.7 │
+├────────────────┴─────────────────┴──────────────────┴─────────────────┤
+│ 8871 rows (20 shown)                                        4 columns │
+└───────────────────────────────────────────────────────────────────────┘
+Duckdb Took: 0.23 sec
