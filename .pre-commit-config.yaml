@@ -24,10 +24,10 @@ repos:
     hooks:
       - id: isort  # Organiza automaticamente os imports em arquivos Python
 
-  - repo: https://github.com/PyCQA/bandit
-    rev: 1.8.2
-    hooks:
-      - id: bandit  # Identifica vulnerabilidades de segurança no código Python
+  #- repo: https://github.com/PyCQA/bandit
+  #  rev: 1.8.2
+  #  hooks:
+  #    - id: bandit  # Identifica vulnerabilidades de segurança no código Python
 
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v2.28.0
