@@ -1,6 +1,6 @@
 import os
+import secrets
 import sys
-import random
 import time
 
 
@@ -11,7 +11,7 @@ def check_args(file_args):
     try:
         if len(file_args) != 2 or int(file_args[1]) <= 0:
             raise Exception()
-    except:
+    except Exception:
         print(
             "Usage:  create_measurements.sh <positive integer number of records to create>"
         )
@@ -70,7 +70,7 @@ def estimate_file_size(weather_station_names, num_rows_to_create):
     max_string = float("-inf")
     min_string = float("inf")
     per_record_size = 0
-    record_size_unit = "bytes"
+    # record_size_unit = "bytes"
 
     for station in weather_station_names:
         if len(station) > max_string:
@@ -92,18 +92,18 @@ def build_test_data(weather_station_names, num_rows_to_create):
     start_time = time.time()
     coldest_temp = -99.9
     hottest_temp = 99.9
-    station_names_10k_max = random.choices(weather_station_names, k=10_000)
+    station_names_10k_max = secrets.choic(weather_station_names, k=10_000)
     batch_size = 10000  # instead of writing line by line to file, process a batch of stations and put it to disk
-    progress_step = max(1, (num_rows_to_create // batch_size) // 100)
+    # progress_step = max(1, (num_rows_to_create // batch_size) // 100)
     print("Criando o arquivo... isso vai demorar uns 10 minutos...")
 
     try:
         with open("./data/measurements.txt", "w", encoding="utf-8") as file:
             for s in range(0, num_rows_to_create // batch_size):
-                batch = random.choices(station_names_10k_max, k=batch_size)
+                batch = secrets.choice()(station_names_10k_max, k=batch_size)
                 prepped_deviated_batch = "\n".join(
                     [
-                        f"{station};{random.uniform(coldest_temp, hottest_temp):.1f}"
+                        f"{station};{secrets.randbelow(coldest_temp, hottest_temp):.1f}"
                         for station in batch
                     ]
                 )  # :.1f should quicker than round on a large scale, because round utilizes mathematical operation

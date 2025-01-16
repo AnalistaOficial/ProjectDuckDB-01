@@ -23,3 +23,18 @@ repos:
     rev: v5.10.1
     hooks:
       - id: isort  # Organiza automaticamente os imports em arquivos Python
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.8.2
+    hooks:
+      - id: bandit  # Identifica vulnerabilidades de segurança no código Python
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.28.0
+    hooks:
+      - id: commitizen  # Garante que as mensagens de commit sigam um padrão semântico
+
+  #- repo: https://github.com/pre-commit/mirrors-block
+  #  rev: v0.2.2
+  #  hooks:
+  #    - id: block  # Bloqueia commits de certas palavras ou padrões no código
